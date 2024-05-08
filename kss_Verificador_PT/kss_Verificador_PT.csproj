@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{673108EC-DA47-416D-9A03-6A3556CED2C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kss_Verificador_PT</RootNamespace>
+    <AssemblyName>kss_Verificador_PT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>KSS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\KSS_FixIT\FixIT\Libs\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\KSS_FixIT\FixIT\Libs\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\KSS_FixIT\FixIT\Libs\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsConfig.cs" />
+    <Compile Include="clsDatosProducto.cs" />
+    <Compile Include="clsGeneral.cs" />
+    <Compile Include="ctlConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlConfig.Designer.cs">
+      <DependentUpon>ctlConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlMain.Designer.cs">
+      <DependentUpon>ctlMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlMessage.Designer.cs">
+      <DependentUpon>ctlMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsPpal.cs">
+      <DependentUpon>dsPpal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsPpal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPpal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="encryptHelper.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSerial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSerial.designer.cs">
+      <DependentUpon>frmSerial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctlConfig.resx">
+      <DependentUpon>ctlConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlMain.resx">
+      <DependentUpon>ctlMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlMessage.resx">
+      <DependentUpon>ctlMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSerial.resx">
+      <DependentUpon>frmSerial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="dsPpal.xsc">
+      <DependentUpon>dsPpal.xsd</DependentUpon>
+    </None>
+    <None Include="dsPpal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPpal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsPpal.xss">
+      <DependentUpon>dsPpal.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_fail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_softwareD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_update_critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_Utilities.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B&amp;B_Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\display.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON-71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON-72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON-73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON-86.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON-87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Session Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xverificador CE 2012-09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kssLogo_otroSoftware-2018WMBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_179.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_184.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_224.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_228.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_277.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_356.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_critical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KSS.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
